@@ -1,0 +1,632 @@
+[
+ {
+  "id": 1,
+  "code": "00004",
+  "name": "Phường Ba Đình"
+ },
+ {
+  "id": 2,
+  "code": "00008",
+  "name": "Phường Ngọc Hà"
+ },
+ {
+  "id": 3,
+  "code": "00025",
+  "name": "Phường Giảng Võ"
+ },
+ {
+  "id": 4,
+  "code": "00070",
+  "name": "Phường Hoàn Kiếm"
+ },
+ {
+  "id": 5,
+  "code": "00082",
+  "name": "Phường Cửa Nam"
+ },
+ {
+  "id": 6,
+  "code": "00091",
+  "name": "Phường Phú Thượng"
+ },
+ {
+  "id": 7,
+  "code": "00097",
+  "name": "Phường Hồng Hà"
+ },
+ {
+  "id": 8,
+  "code": "00103",
+  "name": "Phường Tây Hồ"
+ },
+ {
+  "id": 9,
+  "code": "00118",
+  "name": "Phường Bồ Đề"
+ },
+ {
+  "id": 10,
+  "code": "00127",
+  "name": "Phường Việt Hưng"
+ },
+ {
+  "id": 11,
+  "code": "00136",
+  "name": "Phường Phúc Lợi"
+ },
+ {
+  "id": 12,
+  "code": "00145",
+  "name": "Phường Long Biên"
+ },
+ {
+  "id": 13,
+  "code": "00160",
+  "name": "Phường Nghĩa Đô"
+ },
+ {
+  "id": 14,
+  "code": "00166",
+  "name": "Phường Cầu Giấy"
+ },
+ {
+  "id": 15,
+  "code": "00175",
+  "name": "Phường Yên Hòa"
+ },
+ {
+  "id": 16,
+  "code": "00190",
+  "name": "Phường Ô Chợ Dừa"
+ },
+ {
+  "id": 17,
+  "code": "00199",
+  "name": "Phường Láng"
+ },
+ {
+  "id": 18,
+  "code": "00226",
+  "name": "Phường Văn Miếu - Quốc Tử Giám"
+ },
+ {
+  "id": 19,
+  "code": "00229",
+  "name": "Phường Kim Liên"
+ },
+ {
+  "id": 20,
+  "code": "00235",
+  "name": "Phường Đống Đa"
+ },
+ {
+  "id": 21,
+  "code": "00256",
+  "name": "Phường Hai Bà Trưng"
+ },
+ {
+  "id": 22,
+  "code": "00283",
+  "name": "Phường Vĩnh Tuy"
+ },
+ {
+  "id": 23,
+  "code": "00292",
+  "name": "Phường Bạch Mai"
+ },
+ {
+  "id": 24,
+  "code": "00301",
+  "name": "Phường Vĩnh Hưng"
+ },
+ {
+  "id": 25,
+  "code": "00316",
+  "name": "Phường Định Công"
+ },
+ {
+  "id": 26,
+  "code": "00322",
+  "name": "Phường Tương Mai"
+ },
+ {
+  "id": 27,
+  "code": "00328",
+  "name": "Phường Lĩnh Nam"
+ },
+ {
+  "id": 28,
+  "code": "00331",
+  "name": "Phường Hoàng Mai"
+ },
+ {
+  "id": 29,
+  "code": "00337",
+  "name": "Phường Hoàng Liệt"
+ },
+ {
+  "id": 30,
+  "code": "00340",
+  "name": "Phường Yên Sở"
+ },
+ {
+  "id": 31,
+  "code": "00352",
+  "name": "Phường Phương Liệt"
+ },
+ {
+  "id": 32,
+  "code": "00364",
+  "name": "Phường Khương Đình"
+ },
+ {
+  "id": 33,
+  "code": "00367",
+  "name": "Phường Thanh Xuân"
+ },
+ {
+  "id": 34,
+  "code": "00376",
+  "name": "Xã Sóc Sơn"
+ },
+ {
+  "id": 35,
+  "code": "00382",
+  "name": "Xã Kim Anh"
+ },
+ {
+  "id": 36,
+  "code": "00385",
+  "name": "Xã Trung Giã"
+ },
+ {
+  "id": 37,
+  "code": "00430",
+  "name": "Xã Đa Phúc"
+ },
+ {
+  "id": 38,
+  "code": "00433",
+  "name": "Xã Nội Bài"
+ },
+ {
+  "id": 39,
+  "code": "00454",
+  "name": "Xã Đông Anh"
+ },
+ {
+  "id": 40,
+  "code": "00466",
+  "name": "Xã Phúc Thịnh"
+ },
+ {
+  "id": 41,
+  "code": "00475",
+  "name": "Xã Thư Lâm"
+ },
+ {
+  "id": 42,
+  "code": "00493",
+  "name": "Xã Thiên Lộc"
+ },
+ {
+  "id": 43,
+  "code": "00508",
+  "name": "Xã Vĩnh Thanh"
+ },
+ {
+  "id": 44,
+  "code": "00541",
+  "name": "Xã Phù Đổng"
+ },
+ {
+  "id": 45,
+  "code": "00562",
+  "name": "Xã Thuận An"
+ },
+ {
+  "id": 46,
+  "code": "00565",
+  "name": "Xã Gia Lâm"
+ },
+ {
+  "id": 47,
+  "code": "00577",
+  "name": "Xã Bát Tràng"
+ },
+ {
+  "id": 48,
+  "code": "00592",
+  "name": "Phường Từ Liêm"
+ },
+ {
+  "id": 49,
+  "code": "00598",
+  "name": "Phường Thượng Cát"
+ },
+ {
+  "id": 50,
+  "code": "00602",
+  "name": "Phường Đông Ngạc"
+ },
+ {
+  "id": 51,
+  "code": "00611",
+  "name": "Phường Xuân Đỉnh"
+ },
+ {
+  "id": 52,
+  "code": "00613",
+  "name": "Phường Tây Tựu"
+ },
+ {
+  "id": 53,
+  "code": "00619",
+  "name": "Phường Phú Diễn"
+ },
+ {
+  "id": 54,
+  "code": "00622",
+  "name": "Phường Xuân Phương"
+ },
+ {
+  "id": 55,
+  "code": "00634",
+  "name": "Phường Tây Mỗ"
+ },
+ {
+  "id": 56,
+  "code": "00637",
+  "name": "Phường Đại Mỗ"
+ },
+ {
+  "id": 57,
+  "code": "00640",
+  "name": "Xã Thanh Trì"
+ },
+ {
+  "id": 58,
+  "code": "00643",
+  "name": "Phường Thanh Liệt"
+ },
+ {
+  "id": 59,
+  "code": "00664",
+  "name": "Xã Đại Thanh"
+ },
+ {
+  "id": 60,
+  "code": "00679",
+  "name": "Xã Ngọc Hồi"
+ },
+ {
+  "id": 61,
+  "code": "00685",
+  "name": "Xã Nam Phù"
+ },
+ {
+  "id": 62,
+  "code": "04930",
+  "name": "Xã Yên Xuân"
+ },
+ {
+  "id": 63,
+  "code": "08974",
+  "name": "Xã Quang Minh"
+ },
+ {
+  "id": 64,
+  "code": "08980",
+  "name": "Xã Yên Lãng"
+ },
+ {
+  "id": 65,
+  "code": "08995",
+  "name": "Xã Tiến Thắng"
+ },
+ {
+  "id": 66,
+  "code": "09022",
+  "name": "Xã Mê Linh"
+ },
+ {
+  "id": 67,
+  "code": "09552",
+  "name": "Phường Kiến Hưng"
+ },
+ {
+  "id": 68,
+  "code": "09556",
+  "name": "Phường Hà Đông"
+ },
+ {
+  "id": 69,
+  "code": "09562",
+  "name": "Phường Yên Nghĩa"
+ },
+ {
+  "id": 70,
+  "code": "09568",
+  "name": "Phường Phú Lương"
+ },
+ {
+  "id": 71,
+  "code": "09574",
+  "name": "Phường Sơn Tây"
+ },
+ {
+  "id": 72,
+  "code": "09604",
+  "name": "Phường Tùng Thiện"
+ },
+ {
+  "id": 73,
+  "code": "09616",
+  "name": "Xã Đoài Phương"
+ },
+ {
+  "id": 74,
+  "code": "09619",
+  "name": "Xã Quảng Oai"
+ },
+ {
+  "id": 75,
+  "code": "09634",
+  "name": "Xã Cổ Đô"
+ },
+ {
+  "id": 76,
+  "code": "09661",
+  "name": "Xã Minh Châu"
+ },
+ {
+  "id": 77,
+  "code": "09664",
+  "name": "Xã Vật Lại"
+ },
+ {
+  "id": 78,
+  "code": "09676",
+  "name": "Xã Bất Bạt"
+ },
+ {
+  "id": 79,
+  "code": "09694",
+  "name": "Xã Suối Hai"
+ },
+ {
+  "id": 80,
+  "code": "09700",
+  "name": "Xã Ba Vì"
+ },
+ {
+  "id": 81,
+  "code": "09706",
+  "name": "Xã Yên Bài"
+ },
+ {
+  "id": 82,
+  "code": "09715",
+  "name": "Xã Phúc Thọ"
+ },
+ {
+  "id": 83,
+  "code": "09739",
+  "name": "Xã Phúc Lộc"
+ },
+ {
+  "id": 84,
+  "code": "09772",
+  "name": "Xã Hát Môn"
+ },
+ {
+  "id": 85,
+  "code": "09784",
+  "name": "Xã Đan Phượng"
+ },
+ {
+  "id": 86,
+  "code": "09787",
+  "name": "Xã Liên Minh"
+ },
+ {
+  "id": 87,
+  "code": "09817",
+  "name": "Xã Ô Diên"
+ },
+ {
+  "id": 88,
+  "code": "09832",
+  "name": "Xã Hoài Đức"
+ },
+ {
+  "id": 89,
+  "code": "09856",
+  "name": "Xã Dương Hòa"
+ },
+ {
+  "id": 90,
+  "code": "09871",
+  "name": "Xã Sơn Đồng"
+ },
+ {
+  "id": 91,
+  "code": "09877",
+  "name": "Xã An Khánh"
+ },
+ {
+  "id": 92,
+  "code": "09886",
+  "name": "Phường Dương Nội"
+ },
+ {
+  "id": 93,
+  "code": "09895",
+  "name": "Xã Quốc Oai"
+ },
+ {
+  "id": 94,
+  "code": "09910",
+  "name": "Xã Kiều Phú"
+ },
+ {
+  "id": 95,
+  "code": "09931",
+  "name": "Xã Hưng Đạo"
+ },
+ {
+  "id": 96,
+  "code": "09952",
+  "name": "Xã Phú Cát"
+ },
+ {
+  "id": 97,
+  "code": "09955",
+  "name": "Xã Thạch Thất"
+ },
+ {
+  "id": 98,
+  "code": "09982",
+  "name": "Xã Hạ Bằng"
+ },
+ {
+  "id": 99,
+  "code": "09988",
+  "name": "Xã Hòa Lạc"
+ },
+ {
+  "id": 100,
+  "code": "10003",
+  "name": "Xã Tây Phương"
+ },
+ {
+  "id": 101,
+  "code": "10015",
+  "name": "Phường Chương Mỹ"
+ },
+ {
+  "id": 102,
+  "code": "10030",
+  "name": "Xã Phú Nghĩa"
+ },
+ {
+  "id": 103,
+  "code": "10045",
+  "name": "Xã Xuân Mai"
+ },
+ {
+  "id": 104,
+  "code": "10072",
+  "name": "Xã Quảng Bị"
+ },
+ {
+  "id": 105,
+  "code": "10081",
+  "name": "Xã Trần Phú"
+ },
+ {
+  "id": 106,
+  "code": "10096",
+  "name": "Xã Hòa Phú"
+ },
+ {
+  "id": 107,
+  "code": "10114",
+  "name": "Xã Thanh Oai"
+ },
+ {
+  "id": 108,
+  "code": "10126",
+  "name": "Xã Bình Minh"
+ },
+ {
+  "id": 109,
+  "code": "10144",
+  "name": "Xã Tam Hưng"
+ },
+ {
+  "id": 110,
+  "code": "10180",
+  "name": "Xã Dân Hòa"
+ },
+ {
+  "id": 111,
+  "code": "10183",
+  "name": "Xã Thường Tín"
+ },
+ {
+  "id": 112,
+  "code": "10210",
+  "name": "Xã Hồng Vân"
+ },
+ {
+  "id": 113,
+  "code": "10231",
+  "name": "Xã Thượng Phúc"
+ },
+ {
+  "id": 114,
+  "code": "10237",
+  "name": "Xã Chương Dương"
+ },
+ {
+  "id": 115,
+  "code": "10273",
+  "name": "Xã Phú Xuyên"
+ },
+ {
+  "id": 116,
+  "code": "10279",
+  "name": "Xã Phượng Dực"
+ },
+ {
+  "id": 117,
+  "code": "10330",
+  "name": "Xã Chuyên Mỹ"
+ },
+ {
+  "id": 118,
+  "code": "10342",
+  "name": "Xã Đại Xuyên"
+ },
+ {
+  "id": 119,
+  "code": "10354",
+  "name": "Xã Vân Đình"
+ },
+ {
+  "id": 120,
+  "code": "10369",
+  "name": "Xã Ứng Thiên"
+ },
+ {
+  "id": 121,
+  "code": "10402",
+  "name": "Xã Ứng Hòa"
+ },
+ {
+  "id": 122,
+  "code": "10417",
+  "name": "Xã Hòa Xá"
+ },
+ {
+  "id": 123,
+  "code": "10441",
+  "name": "Xã Mỹ Đức"
+ },
+ {
+  "id": 124,
+  "code": "10459",
+  "name": "Xã Phúc Sơn"
+ },
+ {
+  "id": 125,
+  "code": "10465",
+  "name": "Xã Hồng Sơn"
+ },
+ {
+  "id": 126,
+  "code": "10489",
+  "name": "Xã Hương Sơn"
+ }
+]

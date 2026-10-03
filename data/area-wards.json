@@ -1,0 +1,76 @@
+[
+  {
+    "areas": [
+      "Yên Xá"
+    ],
+    "ward": "Phường Thanh Liệt",
+    "point": "Yên Xá, Thanh Liệt",
+    "note": "Given by the user: Yên Xá, Tân Triều and Triều Khúc are all in phường Thanh Liệt, whatever Google says. 'point' is searched for the distance when Google gave no point in the area"
+  },
+  {
+    "areas": [
+      "Tân Triều"
+    ],
+    "ward": "Phường Thanh Liệt",
+    "point": "Tân Triều, Thanh Liệt"
+  },
+  {
+    "areas": [
+      "Triều Khúc"
+    ],
+    "ward": "Phường Thanh Liệt",
+    "point": "Triều Khúc, Thanh Liệt"
+  },
+  {
+    "areas": [
+      "Vạn Phúc"
+    ],
+    "with": [
+      "Hà Đông",
+      "HĐ"
+    ],
+    "ward": "Phường Hà Đông",
+    "point": "Khu đô thị mới Vạn Phúc, Hà Đông",
+    "note": "Given by the user. Phường Vạn Phúc (Hà Đông) was merged into phường Hà Đông; xã Vạn Phúc in Thanh Trì became xã Nam Phù, hence 'with'"
+  },
+  {
+    "areas": [
+      "Ecodream"
+    ],
+    "ward": "Phường Thanh Liệt",
+    "point": "Ecodream Nguyễn Xiển, Thanh Liệt",
+    "note": "Ecodream (Nguyễn Xiển, Tân Triều): Google puts the bare street in Lĩnh Nam"
+  },
+  {
+    "areas": [
+      "xã Thanh Trì"
+    ],
+    "ward": "Xã Thanh Trì",
+    "point": "Xã Thanh Trì",
+    "note": "An address that writes the new commune explicitly"
+  },
+  {
+    "areas": [
+      "Hà Trì"
+    ],
+    "ward": "Phường Hà Đông",
+    "point": "Hà Trì, Hà Đông",
+    "note": "Khu Hà Trì was in phường Hà Cầu, renamed phường Hà Đông"
+  },
+  {
+    "areas": [
+      "Ciputra"
+    ],
+    "ward": "Phường Phú Thượng",
+    "point": "Khu đô thị Ciputra, Phú Thượng",
+    "note": "Khu đô thị Ciputra lies in phường Phú Thượng"
+  },
+  {
+    "areas": [
+      "khu đô thị mới Hạ Đình"
+    ],
+    "ward": "Phường Khương Đình",
+    "point": "Phố Hạ Đình, Khương Đình",
+    "note": "Autocomplete does not know this estate (gives Phố Hạ Yên Quyết, Yên Hòa). Phường Hạ Đình was split between Khương Đình and Thanh Liệt; every other Hạ Đình address in the data is in Khương Đình"
+  }
+]

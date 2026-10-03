@@ -1,0 +1,326 @@
+[
+  {
+    "source_row": 62,
+    "side": "destination",
+    "address": "Ngã tư Duy Tân, đối diện công viên Cầu Giấy",
+    "ward": "Phường Cầu Giấy",
+    "point": "Công viên Cầu Giấy",
+    "note": "Ngã tư Duy Tân, đối diện công viên Cầu Giấy"
+  },
+  {
+    "source_row": 89,
+    "side": "origin",
+    "address": "Số 98",
+    "sameAsOther": true,
+    "note": "raw_text: \"từ số 98 đến số 87b ngõ Hồ Hố Mẻ… cách nhau tầm 400m\": cùng ngõ với điểm đến"
+  },
+  {
+    "source_row": 89,
+    "side": "destination",
+    "address": "Số 87B, ngõ Hồ Hố Mẻ, Tôn Thất Tùng, Đống Đa",
+    "ward": "Phường Kim Liên",
+    "point": "Ngõ Hồ Hố Mẻ, Kim Liên",
+    "distance": 400,
+    "note": "Ngõ Hồ Hố Mẻ (Tôn Thất Tùng) thuộc Kim Liên; quãng đường theo raw_text \"tầm 400m\""
+  },
+  {
+    "source_row": 155,
+    "side": "destination",
+    "address": "Gần khu đô thị, Sơn Đồng, Hà Nội, Việt Nam",
+    "ward": "Xã Sơn Đồng",
+    "point": "Sơn Đồng, Hoài Đức",
+    "distance": 4000,
+    "note": "\"Gần khu đô thị, Sơn Đồng\"; quãng đường theo raw_text \"4km\""
+  },
+  {
+    "source_row": 208,
+    "side": "origin",
+    "address": "Trường Tiểu Học Đông La Hoài Đức",
+    "ward": "Xã An Khánh",
+    "point": "Đông La, An Khánh",
+    "note": "Xã Đông La cũ nay thuộc xã An Khánh"
+  },
+  {
+    "source_row": 314,
+    "side": "destination",
+    "address": "Km 11.500 đường Ngọc Hồi Tứ Hiệp Thanh Trì",
+    "point": "Tứ Hiệp, Thanh Trì",
+    "note": "Km 11+500 Ngọc Hồi, Tứ Hiệp: Tứ Hiệp cũ chia cho Yên Sở và xã Thanh Trì, lấy phường theo điểm Google"
+  },
+  {
+    "source_row": 436,
+    "side": "origin",
+    "address": "Km 11500 Ngọc Hồi Tứ Hiệp Thanh Trì",
+    "point": "Tứ Hiệp, Thanh Trì",
+    "note": "Km 11+500 Ngọc Hồi, Tứ Hiệp (như trên)"
+  },
+  {
+    "source_row": 440,
+    "side": "origin",
+    "address": "Ngách 19, ngõ 96 đường Hải Bối 2",
+    "ward": "Xã Vĩnh Thanh",
+    "point": "Hải Bối, Đông Anh",
+    "note": "Xã Hải Bối cũ nay thuộc xã Vĩnh Thanh"
+  },
+  {
+    "source_row": 506,
+    "side": "origin",
+    "address": "N2B Trung Hòa Nhân Chính",
+    "ward": "Phường Yên Hòa",
+    "point": "Khu đô thị Trung Hòa Nhân Chính",
+    "note": "N2B Trung Hòa Nhân Chính (phía Trung Hòa) nay thuộc Yên Hòa; Google ghi \"Trung Hoà, Cầu Giấy\""
+  },
+  {
+    "source_row": 1533,
+    "side": "origin",
+    "address": "Khu N6C Trung Hòa, Nhân Chính",
+    "ward": "Phường Yên Hòa",
+    "point": "Khu đô thị Trung Hòa Nhân Chính",
+    "note": "N6C Trung Hòa Nhân Chính (như trên)"
+  },
+  {
+    "source_row": 525,
+    "side": "origin",
+    "address": "Quán Bánh Mì Que khu đô thị Nam Cường- Cổ Nhuế 1",
+    "point": "Tôn Quang Phiệt, Cổ Nhuế",
+    "note": "raw_text: quán bánh mì que (đường Tôn Quang Phiệt) KĐT Nam Cường - Cổ Nhuế 1; lấy phường theo điểm"
+  },
+  {
+    "source_row": 544,
+    "side": "origin",
+    "address": "33 Chùa Trắng Mậu Lương Hà Đông",
+    "ward": "Phường Kiến Hưng",
+    "point": "Chùa Trắng Mậu Lương, Kiến Hưng",
+    "note": "Mậu Lương (Hà Đông) nay thuộc Kiến Hưng"
+  },
+  {
+    "source_row": 545,
+    "side": "origin",
+    "address": "33 Chùa Trắng Mậu Lương Hà Đông",
+    "ward": "Phường Kiến Hưng",
+    "point": "Chùa Trắng Mậu Lương, Kiến Hưng",
+    "note": "như trên"
+  },
+  {
+    "source_row": 640,
+    "side": "destination",
+    "address": "Tổ 6 Phúc Đồng, Long Biên",
+    "point": "Phúc Đồng, Long Biên",
+    "note": "Tổ 6 Phúc Đồng: Phúc Đồng cũ chia cho 4 phường, lấy phường theo điểm"
+  },
+  {
+    "source_row": 665,
+    "side": "destination",
+    "address": "Số 4B, ngách 31, ngõ 55 Cùng Ngõ",
+    "point": "Ngõ 55 Đại Đồng",
+    "note": "\"ngõ 55 cùng ngõ\" = cùng phố Đại Đồng với điểm đi; lấy phường theo điểm"
+  },
+  {
+    "source_row": 697,
+    "side": "origin",
+    "address": "Ngõ 123, Phương Canh, Nam Từ Liêm",
+    "ward": "Phường Xuân Phương",
+    "point": "Phương Canh, Nam Từ Liêm",
+    "note": "Phường Phương Canh cũ nay thuộc Xuân Phương"
+  },
+  {
+    "source_row": 711,
+    "side": "destination",
+    "address": "Số 7, ngõ 159 Kiên Quyết Dương Nội Hà Đông",
+    "ward": "Phường Dương Nội",
+    "point": "Kiên Quyết, Dương Nội",
+    "note": "TDP Kiên Quyết, Dương Nội"
+  },
+  {
+    "source_row": 825,
+    "side": "destination",
+    "address": "Vẫn trong Nội Khu Này",
+    "sameAsOther": true,
+    "distance": 300,
+    "note": "raw_text: \"chuyển sang vẫn trong nội khu này cách 300m\""
+  },
+  {
+    "source_row": 836,
+    "side": "destination",
+    "address": "Đầu Ngõ",
+    "sameAsOther": true,
+    "distance": 200,
+    "note": "raw_text: \"đầu ngõ 200m\""
+  },
+  {
+    "source_row": 890,
+    "side": "destination",
+    "address": "Số 3 E1, khu đô thị mới Cầu Diễn, phường Phú Diễn",
+    "point": "Cầu Diễn, Phú Diễn",
+    "note": "Phường đã có (ghi rõ phường Phú Diễn), thêm điểm để tính quãng đường"
+  },
+  {
+    "source_row": 929,
+    "side": "destination",
+    "address": "Số nhà 60, ngõ 4 Cầu Bươu, Đại Thanh",
+    "ward": "Phường Thanh Liệt",
+    "point": "Ngõ 4 Cầu Bươu",
+    "note": "Cùng ngõ 4 Cầu Bươu với điểm đi (Thanh Liệt); \"Đại Thanh\" ghi trong địa chỉ là nhầm"
+  },
+  {
+    "source_row": 955,
+    "side": "origin",
+    "address": "Ngõ 163 tổ 14 Phú Đô, phường Từ Liêm",
+    "point": "Phú Đô, Từ Liêm",
+    "note": "Phường đã có (ghi rõ phường Từ Liêm), thêm điểm để tính quãng đường"
+  },
+  {
+    "source_row": 960,
+    "side": "origin",
+    "address": "8, ngách 9, ngõ 1057 đường Tỉnh An Khánh Hoài Đức",
+    "ward": "Xã An Khánh",
+    "point": "An Khánh, Hoài Đức",
+    "note": "Ngõ 1057 đường tỉnh, An Khánh"
+  },
+  {
+    "source_row": 976,
+    "side": "origin",
+    "address": "Nhà số 1, ngõ 7, đường Bồ Kết, Đê Song Phương, Hoài Đức",
+    "point": "Song Phương, Hoài Đức",
+    "note": "Đê Song Phương: Song Phương cũ chia cho Sơn Đồng và An Khánh, lấy phường theo điểm"
+  },
+  {
+    "source_row": 997,
+    "side": "destination",
+    "address": "Ô Số 12, lô A19 - NV8, KĐTM Hai Bên Đường Lê Trọng Tấn, Tây Mỗ",
+    "ward": "Phường Tây Mỗ",
+    "distance": 700,
+    "note": "KĐTM hai bên đường Lê Trọng Tấn, Tây Mỗ; raw_text \"(700m)\" từ S2.02 Smart City"
+  },
+  {
+    "source_row": 1005,
+    "side": "origin",
+    "address": "Tòa nhà Sun Tòa Green Ngay cạnh bến xe Mỹ Đình",
+    "ward": "Phường Từ Liêm",
+    "point": "Bến xe Mỹ Đình",
+    "note": "\"Ngay cạnh bến xe Mỹ Đình\""
+  },
+  {
+    "source_row": 1006,
+    "side": "origin",
+    "address": "Ngã 3 Cây Xăng Vĩnh Ngọc Đông Anh",
+    "point": "Vĩnh Ngọc, Đông Anh",
+    "note": "Ngã 3 cây xăng Vĩnh Ngọc: Vĩnh Ngọc cũ chia cho 3 xã, lấy theo điểm"
+  },
+  {
+    "source_row": 1025,
+    "side": "destination",
+    "address": "Ngõ 112 xóm 2 Hải Bối",
+    "ward": "Xã Vĩnh Thanh",
+    "point": "Hải Bối, Đông Anh",
+    "note": "Xã Hải Bối cũ nay thuộc xã Vĩnh Thanh"
+  },
+  {
+    "source_row": 1093,
+    "side": "origin",
+    "address": "19LK2 Đằng Sau CT6C đối diện Viện K",
+    "point": "Bệnh viện K cơ sở Tân Triều",
+    "note": "\"đối diện viện K\": Viện K cơ sở Tân Triều; lấy phường theo điểm"
+  },
+  {
+    "source_row": 1103,
+    "side": "origin",
+    "address": "Xí Nghiệp Xe Bus Cầu Bươu, 158B đường Cầu Bươu, Thanh Liệt",
+    "ward": "Phường Thanh Liệt",
+    "point": "158B Cầu Bươu",
+    "note": "Địa chỉ ghi rõ Thanh Liệt; Google xếp 158B Cầu Bươu vào Kiến Hưng"
+  },
+  {
+    "source_row": 1175,
+    "side": "origin",
+    "address": "Tòa ACB gần Sân Golf Phương Đông Từ Liêm",
+    "point": "Sân golf Phương Đông, Từ Liêm",
+    "note": "\"gần sân golf Phương Đông Từ Liêm\"; lấy phường theo điểm"
+  },
+  {
+    "source_row": 1185,
+    "side": "destination",
+    "address": "Số 63, ngõ 146 đường 19 tháng 5, Văn Quán, Hà Đông",
+    "ward": "Phường Hà Đông",
+    "point": "146 đường 19/5, Văn Quán",
+    "note": "Ngõ 146 đường 19/5, Văn Quán, Hà Đông"
+  },
+  {
+    "source_row": 1196,
+    "side": "origin",
+    "address": "CT7F Dương Nội 2",
+    "ward": "Phường Dương Nội",
+    "point": "Khu đô thị Dương Nội",
+    "note": "CT7F KĐT Dương Nội 2 (như CT7K Dương Nội)"
+  },
+  {
+    "source_row": 1222,
+    "side": "destination",
+    "address": "Nhà đối diện",
+    "sameAsOther": true,
+    "distance": 10,
+    "note": "\"nhà đối diện\": cùng chỗ, quãng đường 10 m"
+  },
+  {
+    "source_row": 1416,
+    "side": "destination",
+    "address": "Lô T1 khu đô thị mới Trung Hòa - Nhân Chính, phường Thanh Xuân, Thành Phố Hà Nội",
+    "point": "Khu đô thị Trung Hòa Nhân Chính",
+    "note": "Phường đã có (ghi rõ phường Thanh Xuân), thêm điểm để tính quãng đường"
+  },
+  {
+    "source_row": 1456,
+    "side": "origin",
+    "address": "CT2 chung cư Thái Hà - Cổ Nhuế 2",
+    "ward": "Phường Đông Ngạc",
+    "point": "Chung cư Thái Hà Bộ Công An, Cổ Nhuế",
+    "note": "Chung cư Thái Hà - Cổ Nhuế 2 (Epic's Home), như CT3 cùng khu"
+  },
+  {
+    "source_row": 1474,
+    "side": "destination",
+    "address": "Tòa Sông Đà 6 Văn Khê, HĐ",
+    "ward": "Phường Hà Đông",
+    "point": "Khu đô thị Văn Khê, Hà Đông",
+    "note": "Tòa Sông Đà 6, KĐT Văn Khê"
+  },
+  {
+    "source_row": 1493,
+    "side": "destination",
+    "address": "Ngõ 2 cổng Phú Đô",
+    "point": "Phú Đô, Từ Liêm",
+    "note": "\"ngõ 2 cổng Phú Đô\"; lấy phường theo điểm"
+  },
+  {
+    "source_row": 1594,
+    "side": "destination",
+    "address": "Đối diện cổng Vào Sân Bóng Mậu Lương, số 19 tổ 10 đường Hoàng Công, Kiến Hưng, Hà Đông",
+    "ward": "Phường Kiến Hưng",
+    "point": "Phố Hoàng Công, Kiến Hưng",
+    "note": "Địa chỉ ghi rõ Kiến Hưng"
+  },
+  {
+    "source_row": 1614,
+    "side": "origin",
+    "address": "Thời Trang Nam Nữ Thuý Dư, số 20 Trung Tâm Thương Mại 1, phố Lê Lợi, Vân Đình",
+    "ward": "Xã Vân Đình",
+    "point": "Phố Lê Lợi, Vân Đình",
+    "note": "Phố Lê Lợi, thị trấn Vân Đình cũ"
+  },
+  {
+    "source_row": 1698,
+    "side": "destination",
+    "address": "Yên Thịnh Yên Lãng Tiến Thịnh Mê Linh",
+    "point": "Yên Lãng, Mê Linh",
+    "distance": 38000,
+    "note": "Yên Thịnh, Tiến Thịnh, Mê Linh: Tiến Thịnh cũ thuộc Yên Lãng/Liên Minh, địa chỉ ghi Yên Lãng; quãng đường theo raw_text \"(38km)\"",
+    "ward": "Xã Yên Lãng"
+  },
+  {
+    "source_row": 166,
+    "side": "destination",
+    "address": "Khu tập thể Nhà hát Chèo, Mai Dịch",
+    "point": "Khu Văn công Mai Dịch",
+    "note": "Theo người dùng: KTT Nhà hát Chèo nằm trên phố Doãn Kế Thiện, trong Khu Văn công Mai Dịch; lấy phường theo điểm"
+  }
+]

@@ -1,0 +1,6 @@
+node_modules/
+.env
+# Workbook backups, Google results for real customer addresses and generated reports: never commit
+input/
+cache/
+output/
