@@ -67,7 +67,9 @@ export function buildQuery(address) {
   // Google picks the right one of several same-name streets (Ngô Quyền in Hà Đông, not in Hoàn Kiếm)
   const area = parts.slice(found.index + 1).filter((p) => !/\d/.test(p) && !AREA_NOISE.test(p));
   // plainQuery (without the area) is the fallback when an old area name throws Google off ("50 Vũ Hữu, Nhân Chính")
-  return area.length ? { ...found.result, query: `${found.result.query}, ${area.join(', ')}`, plainQuery: found.result.query } : found.result;
+  if (!area.length) return found.result;
+  const numberQuery = found.result.numberQuery && `${found.result.numberQuery}, ${area.join(', ')}`;
+  return { ...found.result, query: `${found.result.query}, ${area.join(', ')}`, plainQuery: found.result.query, ...(numberQuery ? { numberQuery } : {}) };
 }
 
 const AREA_NOISE = /^(?:thành phố\s+|tp\.?\s*)?(?:hà nội|hn|việt nam|vietnam)\.?$/iu;
@@ -84,14 +86,26 @@ function findStreet(parts) {
   parts.forEach((part, index) => {
     const m = part.match(LANE_RE);
     const keyword = m?.[1].toLowerCase();
-    if (keyword && !candidates[keyword]) candidates[keyword] = { number: m[2].split('/')[0], tail: m[3], index };
+    // A house number written before the lane ("Số 14, ngõ 2 phố Đông", "18, ngõ 259 Yên Hòa")
+    const houseBefore = /\d/.test([...parts.slice(0, index), part.slice(0, m?.index ?? 0)].join(' '));
+    if (keyword && !candidates[keyword]) candidates[keyword] = { number: m[2].split('/')[0], tail: m[3], index, houseBefore };
   });
   for (const keyword of LANE_PRIORITY) {
     const c = candidates[keyword];
     if (!c) continue;
     const streetText = c.tail ?? stripToStreet(parts.at(-1));
     const result = lanePlusStreet(c.number, streetText);
-    if (result) return { result, index: c.tail ? c.index : parts.length - 1 };
+    if (!result) continue;
+    // Asked by the user: after a house number, the ngõ is searched as written, "ngõ 2 phố Đông" (not "2 Đông": a short
+    // street name alone is read as another street, "ngõ 2 Phạm Văn Đồng"). The house number is still dropped, and
+    // Google's answer is still checked on the street and the lane number. The old "<number> <street>" is kept as
+    // numberQuery, the last retry
+    if (keyword === 'ngõ' && c.houseBefore) {
+      const asWritten = stripToStreet(streetText.split('/')[0]).trim();
+      result.numberQuery = result.query;
+      result.query = `ngõ ${c.number} ${asWritten}`;
+    }
+    return { result, index: c.tail ? c.index : parts.length - 1 };
   }
   // 2. Slash notation without "ngõ"/"ngách"/"hẻm" (optionally after "Số", "Số nhà", "Nhà"): the ngõ
   //    is whichever of the first/last number is bigger, e.g. "201/4 Đê Tô Hoàng" → 201 (201 > 4);

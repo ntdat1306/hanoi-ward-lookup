@@ -238,6 +238,11 @@ export function createGoogleClient({
       const bare = await once('vi', job.query.plainQuery);
       if (bare.d.status === 'found') return bare;
     }
+    // A ngõ searched as written ("ngõ 2 phố Đông") that found nothing: the old "<number> <street>" form, last
+    if (job.query?.numberQuery) {
+      const numbered = await once('vi', job.query.numberQuery);
+      if (numbered.d.status === 'found') return numbered;
+    }
     return first;
   }
 

@@ -4,22 +4,25 @@ import { test } from 'node:test';
 import { areaWardCodes, buildOldWardIndex, oldWardNames } from './old-wards.mjs';
 import { addressHasNumberAndStreet, buildQuery, isBareStreet, placeSearchText, sameStreetSpelling, isDisposalAddress, parseFormattedAddress, placeNameMatches, streetsMatch, wardKey } from './address.mjs';
 
-test('buildQuery keeps "<lane or house number> <street>"', () => {
+test('buildQuery keeps "<lane or house number> <street>"; after a house number, "ngõ N <street>" as written', () => {
   const cases = {
-    'Số nhà 49, ngõ 27 Đại Cồ Việt': '27 Đại Cồ Việt',
+    'Số nhà 49, ngõ 27 Đại Cồ Việt': 'ngõ 27 Đại Cồ Việt',
     '201/4 Đê Tô Hoàng': '201 Đê Tô Hoàng',
-    '18, ngõ 259 Yên Hòa': '259 Yên Hòa',
-    '19, ngõ 143 Quan Hoa': '143 Quan Hoa',
-    'Số 16, ngách 113, ngõ 43 Trung Kính': '43 Trung Kính',
+    '18, ngõ 259 Yên Hòa': 'ngõ 259 Yên Hòa',
+    '19, ngõ 143 Quan Hoa': 'ngõ 143 Quan Hoa',
+    'Số 16, ngách 113, ngõ 43 Trung Kính': 'ngõ 43 Trung Kính',
+    'Số 14, ngõ 2 phố Đông': 'ngõ 2 phố Đông',
+    'Số 6, ngõ 16 đường Thanh Niên Vân Lũng': 'ngõ 16 đường Thanh Niên Vân Lũng',
+    'Ngõ 2 phố Đông': '2 Đông', // no house number before the ngõ: unchanged
     '11/61/1002 Láng': '1002 Láng',
-    'Số nhà 22A, ngách 103, ngõ 1194 đường Láng, phường Láng': '1194 Láng, phường Láng',
+    'Số nhà 22A, ngách 103, ngõ 1194 đường Láng, phường Láng': 'ngõ 1194 đường Láng, phường Láng',
     '23 Quang Trung Hà Đông': '23 Quang Trung Hà Đông',
     '23 Quang Trung, Hà Đông': '23 Quang Trung, Hà Đông',
     '23 Quang Trung, Cửa Nam, Hà Nội': '23 Quang Trung, Cửa Nam',
     '141 An Dương Vương': '141 An Dương Vương',
-    'Số 2 dãy C, ngõ 6 Ngô Quyền, Quang Trung, Hà Đông': '6 Ngô Quyền, Quang Trung, Hà Đông',
+    'Số 2 dãy C, ngõ 6 Ngô Quyền, Quang Trung, Hà Đông': 'ngõ 6 Ngô Quyền, Quang Trung, Hà Đông',
     '843 Quang Trung Hà Đông': '843 Quang Trung Hà Đông',
-    'Số 3, ngõ 138/58 Tân Triều': '138 Tân Triều',
+    'Số 3, ngõ 138/58 Tân Triều': 'ngõ 138 Tân Triều',
     'Ngõ 21/50 Yên Xá': '21 Yên Xá',
     'Ngách 99/110/67 Định Công Hạ': '99 Định Công Hạ',
     'Hẻm 12 Trần Phú': '12 Trần Phú',
@@ -34,6 +37,9 @@ test('buildQuery keeps "<lane or house number> <street>"', () => {
     'Số 3 Lương Yên': '3 Lương Yên',
   };
   for (const [address, query] of Object.entries(cases)) assert.equal(buildQuery(address)?.query, query, address);
+  // Matching is unchanged: street and lane number; the old form stays as the last retry
+  assert.deepEqual(buildQuery('Số 14, ngõ 2 phố Đông'), { query: 'ngõ 2 phố Đông', street: 'Đông', number: '2', numberQuery: '2 Đông' });
+  assert.equal(buildQuery('Số 2 dãy C, ngõ 6 Ngô Quyền, Quang Trung, Hà Đông').numberQuery, '6 Ngô Quyền, Quang Trung, Hà Đông');
 });
 
 test('buildQuery returns null when there is no number + street', () => {
