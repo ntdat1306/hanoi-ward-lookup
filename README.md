@@ -6,6 +6,8 @@ A ward is written only when Google's street matches the searched street **and** 
 
 Claude Code instructions live in [`.claude/skills/fill-wards-google/SKILL.md`](.claude/skills/fill-wards-google/SKILL.md).
 
+For a **raw order sheet** (the export with "Thời gian", "Điểm đón và trả hàng", "Đơn Giá", "SĐT", "Loại DV"…), `pnpm process` does the whole job in one run: see [Processing a raw order sheet](#processing-a-raw-order-sheet).
+
 ## Setup
 
 ```bash
@@ -76,6 +78,51 @@ A move whose pick-up or drop-off only names a disposal action ("Vứt", "Bỏ đ
 | `old-area` | Google's ward is named like an old district and the part right before it is an old ward not merged into it ("…, Trung Hoà, Cầu Giấy, Hà Nội"). When that part is itself a current ward ("…, Vĩnh Hưng, Hai Bà Trưng"), that ward is taken instead |
 | `unknown-ward` | Google's ward is not in `data/wards.json` |
 | `ambiguous` | Matching results point to different wards |
+
+## Processing a raw order sheet
+
+```bash
+pnpm --silent process --cache-only                  # preview: no Google call; cache misses are temporary failures (= calls a real run needs)
+pnpm --silent process --rows 2-40 --out sample.xlsx # a sample
+pnpm --silent process                               # Desktop\data.xlsx → output\data_processed.xlsx
+```
+
+| Option | Default | |
+|---|---|---|
+| `--input <xlsx>` | `data.xlsx` on the Desktop (found through Windows, OneDrive included) | Raw order sheet; never modified |
+| `--out <xlsx>` | `output/<input name>_processed.xlsx` | Refuses to be the input file; a re-run overwrites it |
+| `--rows <list>` | all | Excel row numbers of the source sheet |
+| `--cache-only` | off | No Google request at all |
+| `--statuses <list>` | `Hoàn thành` | "Tình Trạng" values that count as a move; others go to Failed Rows |
+| `--expected-years <list>` | `2026` | Any other year (after the typo fixes) is flagged |
+| `--offline-schema` | off | Use the last schema read (`cache/db-schema.json`) when MySQL is down |
+| `--concurrency <n>` | 5 | Parallel API calls (paced at 5 per second per API anyway) |
+
+The output workbook has exactly four sheets:
+
+- **Original Data**: the source sheet itself, cells and formatting untouched; its Excel row numbers are the `source_row` used everywhere else.
+- **Formatted Data**: one line per source record (blank rows are not records and are listed in the summary): `result` (processed / failed) and `processed_data_row`, the date and time as written, the year fix, the local and UTC timestamps, the address as written and split into `origin_address` / `destination_address` (with the separator rule and the notes removed), price, phone and service type with the rule used for each. No Google data here.
+- **Processed Data**: only records that pass every check, with exactly the columns of the `moves` table that a client supplies (read from MySQL: `moved_at` … `phone`; no `id`, `created_at`, `updated_at`, no helper column). `moved_at` is UTC. The row's source is in Formatted Data (`processed_data_row`).
+- **Failed Rows**: every other record with all its original cells, `source_row`, `error_type` (permanent / temporary (retry)), every failing stage, field and reason (not only the first), and safe diagnostics (Google's answer).
+
+Rules, in order:
+
+1. **Date and time.** The first "Thời gian" column is the date, the second the time of day (free text). Years 2036, 2046 and 3026 are typos for 2026 (only the year changes); any other year outside `--expected-years` fails. Time: "8h", "14h30p", "15g30", "10:45"; a range keeps its start ("8h30-45p", "14-15h"); "chiều"/"tối" add 12 h; "mai" keeps the row date (as for September). The Hà Nội time is converted to UTC (−7 h, date rollover included).
+2. **Addresses.** Notes are removed first (parentheses, "xbg ok", distances, "hỗ trợ…"), then the text is split on arrows (`-->`, `=>`, `—>`…), else on a label ("trả:", "điểm trả hàng"), a word ("đến", "sang", "về"…) or a dash; a label, word or dash that occurs more than once is ambiguous and fails. Several stops keep the first pick-up and last drop-off. A side that is only a distance ("—> 300m"), a missing side, or a disposal action ("chở đi vứt") fails. Each side is cleaned (abbreviations "kđt", "sn", "Ng.", "hđ" spelt out, ", Hà Nội, Việt Nam" dropped) and capitalized the Vietnamese way (names capitalized, "số / ngõ / ngách / chung cư…" lowercase, codes such as "CT1A" uppercase).
+3. **Price.** Whole đồng; "1.500.000", "1,500,000", "280k", "1tr5" are read; decimals, unreadable text and anything under 10.000 đ fail.
+4. **Phone.** Leading 0 restored, +84 → 0; a cell with two numbers keeps the first. A missing phone is copied **only** from the record on the row directly above when it is the same order (same pick-up and drop-off after normalization, same date); chains are followed back to the row that has it. A phone that can't be inferred stays empty (`moves.phone` is nullable); an unreadable one fails.
+5. **Missing date or time.** Same rule: only from the row directly above, same order (and same date for a time, same phone for a date). Never from another order.
+6. **Service type.** Explicit labels only: "Ba gác" → Ba gác, "Tải" → Xe tải, "Trọn gói" → Trọn gói; ids from the `service_types` table. Anything else fails.
+7. **Order status.** Only `--statuses` (default "Hoàn thành") reach Processed Data.
+8. **Wards and distance.** Each distinct address is looked up once with the `pnpm lookup` rules (`src/google.mjs`); the ward id must exist in the `wards` table, and `data/wards.json` must match that table exactly or the run stops. `data/manual-overrides.json` (September rows) is **not** used. The distance is one Routes call per distinct pair of places, in metres. Wards and distance are nullable in the table but required here. Rows that already fail before Google are not looked up (no wasted calls).
+9. **Database checks.** NOT NULL, varchar lengths, int ranges, CHECK (`price`, `distance` ≥ 0), foreign keys. A record whose natural key (phone, Hà Nội day, both addresses, service type: the API's duplicate rule) is already in `moves` fails as a duplicate; two such records in the file are both kept (usually two vehicles of one move, as for September) and marked in `duplicate_of_row`.
+10. **Export.** Written to a temporary file then renamed, then reopened and checked (sheet names and order, row counts, Processed Data columns and types). Nothing is ever written to MySQL.
+
+Two files per input, both overwritten by the next run of the same input: the workbook and, next to it, `<name>_processed.log.jsonl`: the summary on the first line (also printed), then every transformation, inference and failure by source row (phones masked), then Google's answer for each address (query, status, answer, ward, place id, distance).
+
+**Google errors** are classified: 429 (quota), 5xx, timeouts and network failures are *temporary* (retried with back-off; the row fails as "temporary (retry)", re-run later and only the missing answers are asked); 400 is *permanent*; 403 (key, API not enabled, billing) stops every further call of the run. Errors are never cached.
+
+**Cache.** `cache/places-cache.json` keeps Google's answers; the fetch date of each is in `cache/places-cache.meta.json`, and answers older than `GOOGLE_CACHE_TTL_DAYS` (default 30, Google Maps Platform terms limit how long content may be kept; check your own agreement) are dropped and asked again. This applies to `pnpm lookup` too.
 
 ## Pushing to the database
 

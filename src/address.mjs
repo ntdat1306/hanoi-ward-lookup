@@ -195,7 +195,9 @@ const PLACE_STOPWORDS = new Set(['so', 'nha', 'ngo', 'ngach', 'hem', 'duong', 'p
 
 // Words of a place name that say what kind of place it is, not which one ("Khu tập thể", "Trường đh")
 const GENERIC_PLACE_WORDS = new Set(['khu', 'tap', 'the', 'ktt', 'kdt', 'truong', 'dh', 'dai', 'hoc', 'chung', 'cu', 'toa', 'nha',
-  'do', 'thi', 'moi', 'kdtm', 'benh', 'vien', 'cho', 'cong', 'ty', 'to', 'thon', 'xom', 'lang', 'cum', 'tang']);
+  'do', 'thi', 'moi', 'kdtm', 'benh', 'vien', 'cho', 'cong', 'ty', 'to', 'thon', 'xom', 'lang', 'cum', 'tang',
+  // kinds of shop: "Cà phê Alasca Văn Khê" is not a place Google names just "Cà Phê" (in Trung Giã, 40 km away)
+  'ca', 'phe', 'cafe', 'coffee', 'tiem', 'cua', 'sieu', 'khach', 'san']);
 
 // Abbreviations spelt out, so "Khu Công Nghiệp Vĩnh Tuy" meets "CT KCN Vĩnh Tuy"
 const ABBREVIATIONS = { kcn: 'khu cong nghiep', kdt: 'khu do thi', kdtm: 'khu do thi moi', ktt: 'khu tap the' };

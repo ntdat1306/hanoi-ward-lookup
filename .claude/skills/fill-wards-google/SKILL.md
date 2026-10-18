@@ -10,7 +10,9 @@ The workbook has this sheet:
 
 The 126 current Hanoi wards/communes (`id`, `code`, `name`) are in `data/wards.json`; ward cells must hold the `id`, not the code. `data/ward-history.json` lists the old wards merged into each one.
 
-The script `src/lookup-wards.mjs` does all the work. Run it; don't re-implement the lookup by hand.
+The script `src/lookup-wards.mjs` does all the work. Run it; don't re-implement the lookup by hand. Its Google logic lives in `src/google.mjs`, shared with `pnpm process`.
+
+For a **raw order sheet** (data.xlsx on the Desktop: "Thời gian", "Điểm đón và trả hàng", "Đơn Giá", "SĐT", "Loại DV"), use `pnpm process` instead (README, "Processing a raw order sheet"): it splits, normalizes, looks wards and distances up with the same rules and writes the 4-sheet review workbook. Run `pnpm --silent process --cache-only` first and tell the user how many calls the real run needs (`cacheMisses`).
 
 ## How a ward is found
 

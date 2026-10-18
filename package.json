@@ -10,6 +10,7 @@
   },
   "scripts": {
     "lookup": "node src/lookup-wards.mjs",
+    "process": "node src/process-raw.mjs",
     "missing": "node src/export-missing.mjs",
     "check": "node src/audit.mjs",
     "export-json": "node src/export-moves-json.mjs",
